@@ -51,7 +51,6 @@ function ScrollReveal({ children, delay = 0 }) {
 export default function About() {
   const sectionRef = useRef(null);
 
-  // Counter trigger
   const inView = useInView(sectionRef, {
     once: true,
     margin: "-40% 0px -40% 0px",
@@ -61,14 +60,18 @@ export default function About() {
     <section
       ref={sectionRef}
       id="about"
-      className="relative py-32 bg-neutral-100 text-gray-900 overflow-hidden"
+      className="relative w-full py-32 text-gray-900 overflow-hidden"
     >
+      {/* FULL-WIDTH BACKGROUND */}
+      <div className="absolute inset-0 bg-neutral-100" />
+
       {/* TOP TRANSITION FADE */}
       <div className="absolute top-0 left-0 right-0 h-24 bg-gradient-to-b from-black/10 to-transparent" />
 
       {/* SUBTLE BRAND ACCENT */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,rgba(255,140,0,0.06),transparent_60%)]" />
 
+      {/* CONTENT CONTAINER */}
       <div className="relative z-10 max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
 
         {/* LEFT — CONTENT */}
@@ -132,6 +135,7 @@ export default function About() {
             </div>
           </div>
         </ScrollReveal>
+
       </div>
     </section>
   );

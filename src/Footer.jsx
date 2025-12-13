@@ -9,11 +9,12 @@ import {
 
 export default function Footer() {
   return (
-    <footer className="relative bg-black text-white border-t border-white/10">
+    <footer className="relative w-full bg-black text-white border-t border-white/10 overflow-hidden">
 
-      {/* subtle glow */}
+      {/* FULL-WIDTH BACKGROUND GLOW */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(255,140,0,0.05),transparent_60%)]"></div>
 
+      {/* CONTENT CONTAINER */}
       <div className="relative z-10 max-w-7xl mx-auto px-6 py-16">
 
         {/* TOP GRID */}
@@ -36,28 +37,27 @@ export default function Footer() {
               Quick Links
             </h4>
             <ul className="space-y-3 text-sm">
-            <li>
+              <li>
                 <a href="#about" className="text-[#AAB8C2] hover:text-[#FF8C00] transition">
-                About
+                  About
                 </a>
-            </li>
-            <li>
+              </li>
+              <li>
                 <a href="#services" className="text-[#AAB8C2] hover:text-[#FF8C00] transition">
-                Services
+                  Services
                 </a>
-            </li>
-            <li>
+              </li>
+              <li>
                 <a href="#work" className="text-[#AAB8C2] hover:text-[#FF8C00] transition">
-                Work
+                  Work
                 </a>
-            </li>
-            <li>
+              </li>
+              <li>
                 <a href="#contact" className="text-[#AAB8C2] hover:text-[#FF8C00] transition">
-                Contact
+                  Contact
                 </a>
-            </li>
+              </li>
             </ul>
-
           </div>
 
           {/* SERVICES */}
@@ -92,19 +92,21 @@ export default function Footer() {
                 <Facebook size={18} />
               </a>
               <a href="#" className="text-[#AAB8C2] hover:text-[#FF8C00] transition">
-                <MessageCircle size={18} /> {/* WhatsApp */}
+                <MessageCircle size={18} />
               </a>
               <a href="#" className="text-[#AAB8C2] hover:text-[#FF8C00] transition">
                 <Instagram size={18} />
               </a>
             </div>
           </div>
+
         </div>
 
         {/* BOTTOM BAR */}
         <div className="pt-6 border-t border-white/10 text-center text-sm text-[#AAB8C2]">
           © {new Date().getFullYear()} CeyTech Labs. All rights reserved.
         </div>
+
       </div>
     </footer>
   );

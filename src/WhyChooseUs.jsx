@@ -37,14 +37,16 @@ export default function WhyChooseUs() {
   return (
     <section
       id="why-choose-us"
-      className="relative py-20 bg-neutral-100 text-gray-900 overflow-hidden"
+      className="relative w-full py-20 text-gray-900 overflow-hidden"
     >
-      {/* subtle background accent */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_60%_20%,rgba(255,140,0,0.05),transparent_60%)]"></div>
+      {/* FULL-WIDTH BACKGROUND */}
+      <div className="absolute inset-0 bg-neutral-100" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_60%_20%,rgba(255,140,0,0.05),transparent_60%)]" />
 
+      {/* CONTENT CONTAINER */}
       <div className="relative z-10 max-w-7xl mx-auto px-6">
 
-        {/* Header */}
+        {/* HEADER */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -64,7 +66,7 @@ export default function WhyChooseUs() {
           </p>
         </motion.div>
 
-        {/* Cards */}
+        {/* CARDS */}
         <div className="grid md:grid-cols-2 gap-10">
           {reasons.map((reason, index) => {
             const Icon = reason.icon;
@@ -84,7 +86,7 @@ export default function WhyChooseUs() {
                   transition
                 "
               >
-                {/* Icon */}
+                {/* ICON */}
                 <div className="w-14 h-14 rounded-xl bg-orange-500/15 flex items-center justify-center mb-6">
                   <Icon className="w-7 h-7 text-orange-500" />
                 </div>
@@ -100,6 +102,7 @@ export default function WhyChooseUs() {
             );
           })}
         </div>
+
       </div>
     </section>
   );

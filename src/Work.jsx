@@ -143,11 +143,13 @@ export default function Work() {
   return (
     <section
       id="work"
-      className="relative py-16 bg-black text-white overflow-hidden"
+      className="relative w-full py-16 text-white overflow-hidden"
     >
-      {/* subtle background depth */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(255,140,0,0.06),transparent_60%)]"></div>
+      {/* FULL-WIDTH BACKGROUND */}
+      <div className="absolute inset-0 bg-black" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(255,140,0,0.06),transparent_60%)]" />
 
+      {/* CONTENT CONTAINER */}
       <div className="relative z-10 max-w-7xl mx-auto px-6">
 
         {/* Header */}
@@ -213,7 +215,7 @@ export default function Work() {
         </div>
       </div>
 
-      {/* Modal */}
+      {/* MODAL — FULL SCREEN (UNCHANGED) */}
       <AnimatePresence>
         {activeProject && (
           <motion.div
@@ -236,7 +238,7 @@ export default function Work() {
                 overflow-hidden
               "
             >
-              {/* Small Close Button */}
+              {/* Close Button */}
               <button
                 onClick={() => setActiveProject(null)}
                 className="
@@ -265,7 +267,6 @@ export default function Work() {
                   />
                   <div className="absolute inset-0 bg-black/50"></div>
 
-                  {/* Type Badges */}
                   <div className="absolute bottom-4 left-4 flex flex-wrap gap-2">
                     {activeProject.types.map((type, idx) => (
                       <span
@@ -288,7 +289,6 @@ export default function Work() {
                     {activeProject.description}
                   </p>
 
-                  {/* Topics */}
                   {activeProject.topics && (
                     <div className="mb-6">
                       <h4 className="font-display text-lg mb-3">
@@ -302,7 +302,6 @@ export default function Work() {
                     </div>
                   )}
 
-                  {/* Features */}
                   {activeProject.features && (
                     <div className="mb-8">
                       <h4 className="font-display text-lg mb-3">
@@ -322,7 +321,6 @@ export default function Work() {
                     </div>
                   )}
 
-                  {/* Visit Button */}
                   <a
                     href={activeProject.link}
                     target="_blank"

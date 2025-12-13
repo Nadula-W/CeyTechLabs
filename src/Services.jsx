@@ -78,12 +78,13 @@ export default function Services() {
   return (
     <section
       id="services"
-      className="relative py-20 bg-black text-white overflow-hidden"
+      className="relative w-full py-20 text-white overflow-hidden"
     >
-      {/* subtle background */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(255,140,0,0.05),transparent_70%)]"></div>
+      {/* FULL-WIDTH BACKGROUND */}
+      <div className="absolute inset-0 bg-black" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(255,140,0,0.05),transparent_70%)]" />
 
-      {/* Header */}
+      {/* HEADER */}
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -99,7 +100,7 @@ export default function Services() {
         </p>
       </motion.div>
 
-      {/* Service Cards */}
+      {/* SERVICE CARDS */}
       <motion.div
         variants={containerVariants}
         initial="hidden"
@@ -121,7 +122,7 @@ export default function Services() {
               shadow-[0_20px_60px_rgba(0,0,0,0.5)]
             "
           >
-            {/* BIG IMAGE */}
+            {/* IMAGE */}
             <div className="relative h-56 overflow-hidden">
               <img
                 src={service.image}

@@ -48,13 +48,23 @@ export default function Contact() {
   }
 
   return (
-    <section id="contact" className="relative py-32 bg-black text-white overflow-hidden">
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_20%,rgba(255,140,0,0.06),transparent_60%)]"></div>
+    <section
+      id="contact"
+      className="relative w-full py-32 text-white overflow-hidden"
+    >
+      {/* FULL-WIDTH BACKGROUND */}
+      <div className="absolute inset-0 bg-black" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_20%,rgba(255,140,0,0.06),transparent_60%)]" />
 
+      {/* CONTENT CONTAINER */}
       <div className="relative z-10 max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16">
 
         {/* LEFT */}
-        <motion.div initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+        >
           <h2 className="text-4xl font-semibold mb-6">
             Let’s <span className="text-[#FF8C00]">Connect</span>
           </h2>
@@ -66,18 +76,30 @@ export default function Contact() {
 
           <div className="space-y-6">
             <div className="flex gap-3">
-              <div className="w-7 h-7 bg-[#FF8C00] rounded-full flex items-center justify-center"><MapPinIcon /></div>
-              <p className="text-sm text-white/80">180 Kurudugolle Estate, Weralagama</p>
+              <div className="w-7 h-7 bg-[#FF8C00] rounded-full flex items-center justify-center">
+                <MapPinIcon />
+              </div>
+              <p className="text-sm text-white/80">
+                180 Kurudugolle Estate, Weralagama
+              </p>
             </div>
 
             <div className="flex gap-3">
-              <div className="w-7 h-7 bg-[#FF8C00] rounded-full flex items-center justify-center"><EnvelopeIcon /></div>
-              <p className="text-sm text-white/80">nadulawathura@gmail.com</p>
+              <div className="w-7 h-7 bg-[#FF8C00] rounded-full flex items-center justify-center">
+                <EnvelopeIcon />
+              </div>
+              <p className="text-sm text-white/80">
+                nadulawathura@gmail.com
+              </p>
             </div>
 
             <div className="flex gap-3">
-              <div className="w-7 h-7 bg-[#FF8C00] rounded-full flex items-center justify-center"><PhoneIcon /></div>
-              <p className="text-sm text-white/80">+94 77 572 8757</p>
+              <div className="w-7 h-7 bg-[#FF8C00] rounded-full flex items-center justify-center">
+                <PhoneIcon />
+              </div>
+              <p className="text-sm text-white/80">
+                +94 77 572 8757
+              </p>
             </div>
           </div>
         </motion.div>
@@ -86,14 +108,28 @@ export default function Contact() {
         <motion.div className="bg-white/5 border border-white/10 rounded-2xl p-8 shadow-2xl">
           <form onSubmit={sendEmail} className="space-y-6">
 
-            <input name="name" required placeholder="Your full name"
-              className="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-white" />
+            <input
+              name="name"
+              required
+              placeholder="Your full name"
+              className="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-white"
+            />
 
-            <input name="email" type="email" required placeholder="your@email.com"
-              className="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-white" />
+            <input
+              name="email"
+              type="email"
+              required
+              placeholder="your@email.com"
+              className="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-white"
+            />
 
-            <textarea name="message" rows="5" required placeholder="Tell us about your project"
-              className="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-white resize-none" />
+            <textarea
+              name="message"
+              rows="5"
+              required
+              placeholder="Tell us about your project"
+              className="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-white resize-none"
+            />
 
             {/* STATUS MESSAGE */}
             {status === "success" && (
@@ -117,6 +153,7 @@ export default function Contact() {
             </button>
           </form>
         </motion.div>
+
       </div>
     </section>
   );
