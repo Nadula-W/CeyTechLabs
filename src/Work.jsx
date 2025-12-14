@@ -53,7 +53,7 @@ const projects = [
   },
   {
     id: 3,
-    title: "EWB Jewelers",
+    title: "EWB Jewellers",
     types: ["Website", "E-Commerce"],
     image: "/work/ewb.png",
     description:
@@ -107,7 +107,7 @@ const projects = [
   },
   {
     id: 5,
-    title: "Nadula Wathurakumbura Phootography",
+    title: "Nadula Wathurakumbura Photography",
     types: ["Website","Portfolio"],
     image: "/work/nadula.png",
     description:
