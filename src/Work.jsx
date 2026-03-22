@@ -26,7 +26,30 @@ const projects = [
     link: "https://www.kandylakeclubdance.com/",
   },
   {
-    id: 2,
+  id: 2,
+  title: "Mountain Breeze Hotel",
+  types: ["Website", "Hotel Booking System"],
+  image: "/work/mountainbreeze.png",
+  description:
+    "A clean and visually appealing website designed to showcase a luxury hillside hotel in Sri Lanka, providing seamless room booking and promoting a relaxing nature getaway experience.",
+  topics: [
+    "Hotel & Hospitality",
+    "Online Room Booking",
+    "Tourism & Travel",
+    "Nature Retreat Experience",
+  ],
+  features: [
+    "Online room reservation and booking system",
+    "Detailed room categories with pricing and amenities",
+    "High-quality visuals showcasing scenic mountain views",
+    "Responsive design optimized for mobile and desktop",
+    "Information on facilities, dining, and hotel services",
+    "Contact details and location integration for easy navigation",
+  ],
+  link: "https://www.hotelmountainbreeze.com/",
+  },
+  {
+    id: 3,
     title: "Hotel Hibiscus",
     types: ["Website", "Online Reservation"],
     image: "/work/hibiscus.png",
@@ -52,7 +75,7 @@ const projects = [
         link: "https://www.hibiscusbeachhotel.com/",
   },
   {
-    id: 3,
+    id: 4,
     title: "EWB Jewellers",
     types: ["Website", "E-Commerce"],
     image: "/work/ewb.png",
@@ -79,7 +102,7 @@ const projects = [
     link: "https://www.ewbjewel.com/ewbnew/",
   },
   {
-    id: 4,
+    id: 5,
     title: "Siemen Gems and Jewellers",
     types: ["Website","E-Commerce"],
     image: "/work/siemen.png",
@@ -106,7 +129,7 @@ const projects = [
     link: "https://siemen-gems-and-jewellers.vercel.app/",
   },
   {
-    id: 5,
+    id: 6,
     title: "Nadula Wathurakumbura Photography",
     types: ["Website","Portfolio"],
     image: "/work/nadula.png",
